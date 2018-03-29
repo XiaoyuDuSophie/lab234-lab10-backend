@@ -9,10 +9,10 @@ before_install:
 install:
 - mvn install -Dmaven.javadoc.skip=true -B -V
 - ls -l
-- docker build --build-arg JAR_FILE=/target/Mybackend.jar -t $DOCKER_USERNAME/se234-lab10-backend
+- docker build --build-arg JAR_FILE=/target/myBackend.jar -t $DOCKER_USERNAME/se234-lab10-backend
   .
-- docker push saksit32/se234-lab10-backend
-- docker pull saksit32/se234-lab10-client
+- docker push sophiedu/se234-lab10-backend
+- docker pull sophiedu/se234-lab10-client
 script:
 - docker-compose -H "$HOST_NAME" up -d
 cache:
